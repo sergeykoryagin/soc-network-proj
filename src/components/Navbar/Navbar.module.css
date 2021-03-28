@@ -1,0 +1,19 @@
+.nav {
+    grid-area: n;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.nav>div {
+    margin: 5%;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.nav div.active a{
+    color: white;
+}
