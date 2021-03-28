@@ -1,6 +1,7 @@
 .dialogs {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    gap: 20px;
 }
 
 .dialogItems {
@@ -8,19 +9,3 @@
     border-right: 2px solid white;
 }
 
-.dialogItems .active {
-    color: white;
-}
-
-.dialogItem {
-
-}
-
-
-.messages {
-    padding: 20px;
-}
-
-.message {
-
-}

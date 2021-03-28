@@ -1,0 +1,10 @@
+
+.dialogItem {
+    padding: 5px;
+}
+
+.dialogItem > a {
+    color: black;
+    text-decoration: none;
+}
+
