@@ -1,7 +1,16 @@
 import s from './Posts.module.css';
 import Post from './Post/Post.jsx'
 
-const Posts = () => {
+const Posts = (props) => {
+
+    let posts = [
+        {id: 1, postContent: "Эй))", likesCount: "15"},
+        {id: 2, postContent: "Кек", likesCount: "20"}
+    ]
+
+    let postElements = posts.map(p => <Post id={p.id} likesCount={p.likesCount}/>)
+
+
     return (
         <div className={s.posts}>
             <h3>Posts</h3>
@@ -10,8 +19,7 @@ const Posts = () => {
                 <button>Post</button>
             </div>
             <div>
-                <Post postContent="Эй))" likesCount="15" />
-                <Post postContent="Кек" likesCount="20" />
+                {postElements}
             </div>
         </div>
     )

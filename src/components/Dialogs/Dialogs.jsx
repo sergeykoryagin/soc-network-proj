@@ -14,26 +14,38 @@ const Message = (props) => {
     return <div className={s.message}>{props.message}</div>
 }
 
-const Dialogs = () => {
+const Dialogs = (props) => {
+
+    let dialogs = [
+        {id: "1", name: "Artem"},
+        {id: "2", name: "Parahat"},
+        {id: "3", name: "Ramil"},
+        {id: "4", name: "Anton"},
+        {id: "5", name: "Timur"},
+        {id: "6", name: "Ildar"}
+    ]
+
+    let messages = [
+        {id: "1", message: "privet Sergey)"},
+        {id: "2", message: "Privet)"},
+        {id: "3", message: "kak dela?"},
+        {id: "4", message: "Otlichno"},
+        {id: "5", message: "u tebya kak?"},
+        {id: "6", message: "horosho"},
+        {id: "7", message: "Sergey esli mozhno u menya pros'ba est'"},
+        {id: "8", message: "u nas segodnya kontrol'niy po diffira"}
+    ]
+
+    let dialogElements = dialogs.map(d => <DialogItem id={d.id} name={d.name}/>)
+    let messageElements = messages.map(m => <Message id={m.id} message={m.message}/>)
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogItems}>
-                <DialogItem id={"1"} name={"Artem"}/>
-                <DialogItem id={"2"} name={"Parahat"}/>
-                <DialogItem id={"3"} name={"Ramil"}/>
-                <DialogItem id={"4"} name={"Anton"}/>
-                <DialogItem id={"5"} name={"Timur"}/>
-                <DialogItem id={"6"} name={"Ildar"}/>
+                {dialogElements}
             </div>
             <div className={s.messages}>
-                <Message message={"privet Sergey)"}/>
-                <Message message={"Privet)"}/>
-                <Message message={"kak dela?"}/>
-                <Message message={"Otlichno!"}/>
-                <Message message={"u tebya kak?"}/>
-                <Message message={"horosho"}/>
-                <Message message={"Sergey esli mozhno u menya pros'ba est'"}/>
-                <Message message={"u nas segodnya kontrol'niy po diffira"}/>
+                {messageElements}
             </div>
         </div>
     );
