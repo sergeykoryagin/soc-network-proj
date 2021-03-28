@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <header className={s.header}>
             <img
-                src={"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/647px-Apple_logo_black.svg.png"}
+                src={"https://aiconica.net/previews/spider-web-icon-1027.png"}
                 alt={"logo"}
             />
         </header>

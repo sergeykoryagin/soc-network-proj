@@ -1,19 +1,22 @@
 .nav {
     grid-area: n;
-    background-color: cornflowerblue;
+    background-color: #9978c8;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding: 10px;
+
 }
 
-.nav>div {
-    margin: 5%;
+.item {
+    margin-bottom: 10px;
 }
 
-.nav a {
+.item a {
     text-decoration: none;
+    color: white;
 }
 
-.nav div.active a{
-    color: white;
+.item a.active {
+    color: black;
 }

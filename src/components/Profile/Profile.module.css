@@ -1,4 +1,4 @@
-.content {
-    grid-area: c;
-    background-color: pink;
+.profile {
+    display: grid;
+    grid-template-rows: 150px 50px auto auto;
 }
