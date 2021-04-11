@@ -1,0 +1,50 @@
+.photos {
+    grid-area: photos;
+    font-size: 14px;
+    color: #E2E2E2;
+}
+
+.spec {
+    background: -webkit-linear-gradient(135deg, #3C5AFB, #b004db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.userPhotos{
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px;
+}
+
+.countPhotos{
+    margin-left: 20px;
+}
+
+.userPhoto{
+    min-width: 15%;
+    width: 17%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(0.5px) drop-shadow(0px 2px 4px rgba(93, 30, 225, 0.79));
+    border-radius: 5px;
+}
+
+.photo1{
+    background-image: url("./../../../../images/photos/photo1.jpg");
+}
+
+.photo2{
+    background-image: url("./../../../../images/photos/photo2.jpg");
+}
+.photo3{
+    background-image: url("./../../../../images/photos/photo3.jpg");
+}
+.photo4{
+    background-image: url("./../../../../images/photos/photo4.jpg");
+}
+.photo5{
+    background-image: url("./../../../../images/photos/photo5.jpg");
+}

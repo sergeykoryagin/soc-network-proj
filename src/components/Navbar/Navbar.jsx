@@ -4,21 +4,23 @@ import {NavLink} from "react-router-dom";
 const Navbar = () => {
     return (
         <nav className={s.nav}>
-            <div className={s.item}>
-                <NavLink to={"/profile"} activeClassName={s.active}>Profile</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink to={"/dialogs"} activeClassName={s.active}>Dialogs</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink to={"/news"} activeClassName={s.active}>News</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink to={"/music"} activeClassName={s.active}>Music</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink to={"/settings"} activeClassName={s.active}>Settings</NavLink>
-            </div>
+            <ul className={s.menuList}>
+                <li className={s.item}>
+                    <NavLink to={"/profile"} activeClassName={s.active}>profile</NavLink>
+                </li>
+                <li className={s.item}>
+                    <NavLink to={"/dialogs"} activeClassName={s.active}>dialogs</NavLink>
+                </li>
+                <li className={s.item}>
+                    <NavLink to={"/friends"} activeClassName={s.active}>friends</NavLink>
+                </li>
+                <li className={s.item}>
+                    <NavLink to={"/news"} activeClassName={s.active}>news</NavLink>
+                </li>
+                <li className={s.item}>
+                    <NavLink to={"/music"} activeClassName={s.active}>music</NavLink>
+                </li>
+            </ul>
         </nav>
     );
 }

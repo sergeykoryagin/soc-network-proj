@@ -1,0 +1,61 @@
+.infoArea {
+    grid-area: info;
+
+    background: linear-gradient(180deg, rgba(44, 217, 255, 0.15) 0%, rgba(61, 9, 171, 0.15) 100%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 10px 20px;
+
+    display: grid;
+    gap: 5px;
+    grid-template-areas: "name ."
+"desc bday"
+"desc city"
+"photos photos";
+
+}
+
+.userName {
+    grid-area: name;
+}
+
+.description {
+    grid-area: desc;
+}
+
+.birthday {
+    grid-area: bday;
+}
+
+.city {
+    grid-area: city;
+}
+
+
+.spec {
+    background: -webkit-linear-gradient(135deg, #3C5AFB, #b004db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.userName, .userDescription, .userBirthday, .userCity {
+    font-size: 14px;
+    color: #E2E2E2;
+}
+
+.userDescription {
+    margin: 0;
+    line-height: 1em;
+}
+
+.birthday, .city {
+    display: flex;
+    justify-content: space-between;
+}
+
+.userBirthday, .userCity {
+    margin-left: 20px;
+}
+
+

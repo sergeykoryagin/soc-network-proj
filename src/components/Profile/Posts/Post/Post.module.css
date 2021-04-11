@@ -1,17 +1,105 @@
-.postContent {
-    font-style: italic;
+.post {
+    background: linear-gradient(180deg, rgba(44, 217, 255, 0.15) 0%, rgba(61, 9, 171, 0.15) 100%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 5px 20px 100px 20px;
+
+    padding: 10px;
+    width: 60%;
+    margin-bottom: 20px;
+    position: relative;
+
+    display: grid;
+    gap: 5px;
+    grid-template-areas: "date likes"
+"cont comms"
+"cont .";
+    grid-template-rows: 20px 20px auto;
+    grid-template-columns: 5fr 1fr;
 }
 
-.post>img {
-    width: 40px;
-    height: 40px;
+.post:last-child {
+    margin-bottom: 0;
+}
+
+.userAvatar {
+    position: absolute;
+    top: 0;
+    left: -70px;
+
+    width: 60px;
+    height: 60px;
+    background-image: url("./../../../../images/photos/avatar.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: avatar;
     border-radius: 50%;
+    filter: drop-shadow(10px 10px 10px rgba(89, 7, 224, 0.5));
+}
+
+
+.postDate {
+    grid-area: date;
+    color: #a9a9a9;
+    font-size: 12px;
+    line-height: 1em;
+}
+
+.postContent {
+    grid-area: cont;
+    color: #E2E2E2;
+}
+
+.postContent pre {
+    padding: 5px;
+    margin: 0;
+    font-family: "Rajdhani", monospace;
+    white-space: pre-wrap;
 }
 
 .likes {
-    color: deeppink;
+    grid-area: likes;
+    position: relative;
 }
 
-.likes>.likeButton {
-    margin-right: 5px;
+.likes, .comments {
+    display: flex;
 }
+
+.likeButton, .commentsButton  {
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 18px;
+}
+
+.likeButton {
+    background-image: url("./../../../../images/icons/non-like.svg");
+}
+.commentsButton {
+    background-image: url("./../../../../images/icons/comms.svg");
+}
+
+.likeButton:hover {
+    background-image: url("./../../../../images/icons/like-active.svg");
+    filter: drop-shadow(1px 1px 3px #B004DB);
+}
+
+.commentsButton:hover {
+    background-image: url("./../../../../images/icons/comms-active.svg");
+    filter: drop-shadow(1px 1px 3px #B004DB);
+}
+
+.likesCount, .commentsCount {
+    padding-left: 5px;
+    line-height: 1em;
+    background: -webkit-linear-gradient(135deg, #3C5AFB, #b004db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.comments {
+    grid-area: comms;
+}
+

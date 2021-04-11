@@ -1,11 +1,58 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
-}
 
-.dialogItems {
     padding: 20px;
-    border-right: 2px solid white;
+    border-radius: 20px;
+
+    background-color: rgba(10, 10, 10, 0.7);
 }
 
+.dialogItems, .messages {
+    padding: 10px;
+
+    background: linear-gradient(180deg, rgba(44, 217, 255, 0.15) 0%, rgba(61, 9, 171, 0.15) 100%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+}
+
+.sendButton {
+    display: block;
+    text-decoration: none;
+    color: #E2E2E2;
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    align-self: end;
+    width: 110px;
+    margin-left: 5px;
+    filter: drop-shadow(0px 5px 5px rgba(92, 16, 253, 0.56));
+}
+
+
+.sendButton span {
+    display: block;
+    background-color: black;
+    color: #E2E2E2;
+    border-radius: 5px;
+}
+
+.sendButton::after {
+    content: "";
+    width: 106%;
+    height: 110%;
+    top: -5%;
+    left: -3%;
+    position: absolute;
+    border-radius: 5px;
+    z-index: -1;
+    background: linear-gradient(135deg, #3C5AFB, #b004db);
+}
+
+.sendButton span:hover {
+    background-color: transparent;
+    cursor: pointer;
+}

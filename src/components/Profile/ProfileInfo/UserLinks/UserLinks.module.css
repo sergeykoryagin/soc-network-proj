@@ -1,0 +1,67 @@
+
+.links {
+    grid-area: links;
+    position: relative;
+    background-color: rgba(10, 10, 10, 0.7);
+    border-radius: 20px;
+}
+
+.links::after {
+    content: "";
+    background-image: linear-gradient(to bottom right,
+    rgba(60, 90, 251, 0.8) 0.12%,
+    rgba(176, 4, 219, 0.8) 99.64%);
+    width: 110%;
+    height: 104%;
+    position: absolute;
+    top: -2%;
+    left: -5%;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.links ul {
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.links a {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+}
+
+.tg a {
+    background-image: url("./../../../../images/icons/tg.svg");
+}
+
+.vk a {
+    background-image: url("./../../../../images/icons/vk.svg");
+}
+
+.steam a {
+    background-image: url("./../../../../images/icons/steam.svg");
+}
+
+.inst a {
+    background-image: url("./../../../../images/icons/inst.svg");
+}
+
+.tw a {
+    background-image: url("./../../../../images/icons/tw.svg");
+}
+
+.yt a {
+    background-image: url("./../../../../images/icons/yt.svg");
+}

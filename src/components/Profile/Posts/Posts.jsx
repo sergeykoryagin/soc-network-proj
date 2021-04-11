@@ -2,18 +2,12 @@ import s from './Posts.module.css';
 import Post from './Post/Post.jsx'
 
 const Posts = (props) => {
-    let postElements = props.posts.map(p => <Post id={p.id} likesCount={p.likesCount}/>)
+    let postElements = props.posts.map(p => <Post id={p.id} likesCount={p.likesCount} postContent={p.postContent}
+                                                  date={p.date} comments={p.comments}/>)
 
     return (
         <div className={s.posts}>
-            <h3>Posts</h3>
-            <div className={s.newPost}>
-                <textarea placeholder="New post..."></textarea>
-                <button>Post</button>
-            </div>
-            <div>
-                {postElements}
-            </div>
+            {postElements.reverse()}
         </div>
     )
 }

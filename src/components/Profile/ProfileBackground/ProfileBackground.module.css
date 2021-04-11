@@ -1,0 +1,18 @@
+.profileBackground {
+    position: absolute;
+    background-image: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(10, 10, 10, 0.5) 69.75%),
+    url("./../../../images/backgrounds/bg3.jpg");
+    background-blend-mode: multiply, normal;
+    filter: blur(1px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}

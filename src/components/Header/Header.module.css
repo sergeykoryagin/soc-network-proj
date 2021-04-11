@@ -1,11 +1,57 @@
 .header {
-    grid-area: h;
+    background-color: rgba(10, 10, 10, 0.7);
+    height: 100px;
+    width: 100%;
     display: flex;
-    background-color: #9978c8;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.header img {
+.headerWrapper {
+    max-width: 960px;
+    min-width: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
     width: 50px;
+    height: 50px;
+    background-image: url("../../images/icons/logo2.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    filter: drop-shadow(0px 2px 2px rgba(242, 32, 234, 0.5));
+}
+
+.logo span {
+    position: absolute;
+    top: 10px;
+    left: 65px;
+    font-size: 24px;
+    color: #0B2349;
+    background: -webkit-linear-gradient(135deg, #3C5AFB, #b004db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 2px 2px rgba(242, 32, 234, 0.5));
+}
+
+.properties {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    background-image: url("../../images/icons/properties.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: drop-shadow(0px 2px 2px rgba(242, 32, 234, 0.5));
+}
+
+.properties span {
+    color: #E2E2E2;
+    position: absolute;
+    right: 40px;
+    filter: drop-shadow(0px 2px 2px rgba(242, 32, 234, 0.5));
 }

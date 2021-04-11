@@ -1,0 +1,62 @@
+.friends {
+    grid-area: friends;
+}
+
+.friends span:first-child {
+    background: -webkit-linear-gradient(135deg, #3C5AFB, #b004db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.countFriends {
+    margin-left: 20px;
+    color: #E2E2E2;
+}
+
+.friendsPreview {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+
+    background: linear-gradient(180deg, rgba(44, 217, 255, 0.15) 0%, rgba(61, 9, 171, 0.15) 100%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+
+    display: grid;
+    gap: 20px;
+    grid-template-rows: repeat(2, 40px);
+    grid-template-columns: repeat(3, 40px);
+}
+
+.photo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    filter: blur(0.3px) drop-shadow(0px 2px 4px rgba(93, 30, 225, 0.79));
+}
+
+.photo1 {
+    background-image: url("../../../images/photos/kirill.jpg");
+}
+
+.photo2 {
+    background-image: url("../../../images/photos/egor.jpg");
+}
+
+.photo3 {
+    background-image: url("../../../images/photos/ildar.jpg");
+}
+
+.photo4 {
+    background-image: url("../../../images/photos/yusuf.jpg");
+}
+
+.photo5 {
+    background-image: url("../../../images/photos/timur.jpg");
+}
+
+.photo6 {
+    background-image: url("../../../images/photos/kolya.jpg");
+}

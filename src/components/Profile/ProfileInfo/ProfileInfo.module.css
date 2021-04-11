@@ -1,5 +1,54 @@
 .profileInfo {
-    padding: 10px;
-    z-index: 1;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:"links avatar info"
+"links avatar info"
+"links buttons info"
+". . info";
+    grid-template-rows:  2fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr 10fr;
 }
 
+
+.profileButtons {
+    grid-area: buttons;
+}
+
+.profileButtons div {
+    width: 100%;
+    height: 30px;
+    max-height: 30px;
+    min-width: 100px;
+    filter: drop-shadow(0px 5px 5px rgba(92, 16, 253, 0.56));
+}
+
+.editButton {
+    margin-bottom: 10px;
+}
+
+.profileButtons a {
+    display: block;
+    text-decoration: none;
+    color: #E2E2E2;
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.profileButtons a::after {
+    content: "";
+    width: 106%;
+    height: 110%;
+    top: -5%;
+    left: -3%;
+    position: absolute;
+    border-radius: 5px;
+    z-index: -1;
+    background: linear-gradient(135deg, #3C5AFB, #b004db);
+}
+
+
+.profileButtons a:hover {
+    background-color: transparent;
+}
