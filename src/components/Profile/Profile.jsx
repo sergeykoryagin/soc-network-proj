@@ -10,13 +10,13 @@ const Profile = (props) => {
 
     return (
         <div className={s.profile}>
-            <ProfileBackground />
-            <ProfileInfo />
+            <ProfileBackground/>
+            <ProfileInfo/>
             <div className={s.wall}>
-                <Friends />
+                <Friends/>
                 <NewPost dispatch={props.dispatch}
                          newPostText={props.profilePage.newPostText}/>
-                <Posts posts={props.profilePage.posts} />
+                <Posts posts={props.profilePage.posts}/>
             </div>
         </div>
     );

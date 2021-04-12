@@ -1,3 +1,6 @@
+import dialogsReducer from "./dialogs-reducer";
+import profileReducer from "./profile-reducer";
+
 let store = {
     _state: {
         dialogPage: {
@@ -57,7 +60,7 @@ let store = {
         console.log("State changed")
     },
 
-    getState(){
+    getState() {
         return this._state
     },
     subscribe(observer) {
@@ -65,35 +68,12 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === "ADD-POST"){
-            this._state.profilePage.posts.push({
-                id: this._state.profilePage.posts.length + 1,
-                postContent: this._state.profilePage.newPostText,
-                likesCount: 0,
-                date: "11.04.2021, sunday",
-                comments: []
-            })
-            this._state.profilePage.newPostText = ""
-            this._callSubscriber(this._state)
-        }
-        else if (action.type === "UPDATE-NEW-POST-TEXT"){
-            this._state.profilePage.newPostText = action.newText
-            this._callSubscriber(this._state)
-        }
-        else if (action.type === "ADD-MESSAGE") {
-            this._state.dialogPage.messages.push({
-                id: this._state.dialogPage.messages.length + 1,
-                message: this._state.dialogPage.newMessageText
-            })
-            this._state.dialogPage.newMessageText = ""
-            this._callSubscriber(this._state)
-        }
-        else if (action.type === "UPDATE-NEW-MESSAGE-TEXT"){
-            this._state.dialogPage.newMessageText = action.newText
-            this._callSubscriber(this._state)
-        }
+        this._state.dialogPage = dialogsReducer(this._state.dialogPage, action)
+        this._state.profilePage = profileReducer(this._state.profilePage, action)
+        this._callSubscriber(this._state)
     }
 }
+
 
 export default store;
 
