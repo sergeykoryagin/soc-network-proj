@@ -4,10 +4,10 @@ import Photos from "../Photos/Photos";
 const InfoArea = (props) => {
     return (
         <div className={s.infoArea}>
-            <span className={s.userName}>Sergey Koryagin</span>
+            <span className={s.userName}>{props.fullName}</span>
             <div className={s.description}>
                 <span className={s.spec}>about me</span>
-                <p className={s.userDescription}>20 y.o. student, programmer, layout-designer, web-designer</p>
+                <p className={s.userDescription}>{props.aboutMe}</p>
             </div>
             <div className={s.birthday}>
                 <span className={s.spec}>birthday</span>

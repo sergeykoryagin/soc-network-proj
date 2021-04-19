@@ -7,8 +7,8 @@ import Avatar from "./Avatar/Avatar"
 const ProfileInfo = (props) => {
     return (
         <div className={s.profileInfo}>
-            <UserLinks />
-            <Avatar />
+            <UserLinks contacts={props.profile.contacts}/>
+            <Avatar photos={props.profile.photos}/>
             <div className={s.profileButtons}>
                 <div className={s.editButton}>
                     <a href={"#"}>edit</a>
@@ -17,7 +17,7 @@ const ProfileInfo = (props) => {
                     <a href={"#"}>add new photo</a>
                 </div>
             </div>
-            <InfoArea />
+            <InfoArea aboutMe={props.profile.aboutMe} fullName={props.profile.fullName}/>
         </div>
     );
 }

@@ -1,8 +1,5 @@
 .avatar {
-    background-image: url("./../../../../images/photos/avatar.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    max-width: 200px;
     grid-area: avatar;
     border-radius: 10px;
     filter: drop-shadow(10px 10px 10px rgba(89, 7, 224, 0.5));

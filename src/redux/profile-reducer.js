@@ -1,5 +1,9 @@
-const ADD_POST = "ADD-POST"
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT"
+import {act} from "@testing-library/react";
+
+const ADD_POST = 'ADD-POST'
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
+const SET_PROFILE = 'SET-PROFILE'
+
 
 let initialState = {
     newPostText: "",
@@ -30,25 +34,38 @@ let initialState = {
                 }
             ]
         }
-    ]
+    ],
+    profile: null
 }
 
 
 const profileReducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case ADD_POST:
-            state.posts.push({
-                id: state.posts.length + 1,
-                postContent: state.newPostText,
-                likesCount: 0,
-                date: "11.04.2021, sunday",
-                comments: []
-            })
-            state.newPostText = ""
-            return state
+            return {
+                ...state,
+                posts: [
+                    ...state.posts,
+                    {
+                        id: state.posts.length + 1,
+                        postContent: state.newPostText,
+                        likesCount: 0,
+                        date: "11.04.2021, sunday",
+                        comments: []
+                    }
+                ],
+                newPostText: ""
+            }
         case UPDATE_NEW_POST_TEXT:
-            state.newPostText = action.newText
-            return state
+            return {
+                ...state,
+                newPostText: action.newText
+            }
+        case SET_PROFILE:
+            return{
+                ...state,
+                profile: action.profile
+            }
         default:
             return state
     }
@@ -61,5 +78,10 @@ export const updateNewPostTextActionCreator = (newText) => ({
     type: UPDATE_NEW_POST_TEXT,
     newText
 })
+export const setProfile = profile => ({
+    type: SET_PROFILE,
+    profile
+})
+
 
 export default profileReducer

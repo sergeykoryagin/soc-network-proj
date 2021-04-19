@@ -2,9 +2,7 @@ import s from "./Avatar.module.css"
 
 const Avatar = (props) => {
     return (
-        <div className={s.avatar}>
-
-        </div>
+        <img className={s.avatar} src={props.photos.large}/>
     )
 }
 
